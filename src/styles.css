@@ -1,4 +1,23 @@
+body {
+  background-color: #f7f8f9;
+}
 .App {
   font-family: sans-serif;
-  text-align: center;
+  /* text-align: center; */
+  margin-top: 70px;
+  background-color: #ffffff;
+  padding: 15px;
+  outline: 1px solid lightgray;
+}
+
+.navbar-title-color {
+  color: white;
+}
+
+.navbar-component {
+  background-color: #ff1025;
+}
+
+.align-left {
+  text-align: right;
 }
