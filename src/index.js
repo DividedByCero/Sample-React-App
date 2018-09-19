@@ -8,18 +8,15 @@ import {
   Typography,
   Grid,
   withStyles,
-  Button
+  Button,
+  Paper,
+  Container,
+  Divider
 } from "@material-ui/core";
 
-const styles = {
-  root: {
-    paddingTop: 30,
-    textAlign: "right"
-  },
-  gridChild: {
-    paddingTop: 30
-  }
-};
+const stuff = {
+  padding : 150
+}
 
 function App(props) {
   const { classes } = props;
@@ -27,18 +24,28 @@ function App(props) {
     <React.Fragment>
       <HeaderBar />
       <div className="App">
-        <Grid container>
+        <Grid container spacing={8}>
           <Grid item xs={12}>
-            <Typography variant="title">[Template]</Typography>
+            <Typography variant="title">[Sample]</Typography>
           </Grid>
-          <Grid item xs={12} className={classes.root}>
-            <InputWrapper />
+          <Grid item xs={12}>
+            <Divider />
           </Grid>
-          <Grid item xs={12} className={classes.root}>
-            <InputWrapper />
+          <Grid item lg={3} sm={12} xs={12}>
+            <Paper>
+              <div style={{ padding: 50}}>
+                <Typography variant="caption" align="left">Field 1</Typography>
+                <InputWrapper className={stuff} />
+              </div>
+            </Paper>
           </Grid>
-          <Grid item xs={12} className={classes.root}>
-            <Button variant="outlined">Save</Button>
+          <Grid item lg={3} sm={12} xs={12}>
+            <Paper className={stuff}>
+              <div style={{ padding: 50 }}>
+                <Typography align="caption">Field 1</Typography>
+                <InputWrapper />
+              </div>
+            </Paper>
           </Grid>
         </Grid>
       </div>
@@ -47,5 +54,5 @@ function App(props) {
 }
 
 const rootElement = document.getElementById("root");
-var AppWrapper = withStyles(styles)(App);
+var AppWrapper = App;
 ReactDOM.render(<AppWrapper />, rootElement);

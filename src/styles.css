@@ -1,13 +1,16 @@
 body {
-  background-color: #f7f8f9;
+  background-color: #e6ecf2;
 }
+
+.background-white {
+  background-color: #e6ecf2;
+}
+
 .App {
   font-family: sans-serif;
   /* text-align: center; */
   margin-top: 70px;
-  background-color: #ffffff;
   padding: 15px;
-  outline: 1px solid lightgray;
 }
 
 .navbar-title-color {

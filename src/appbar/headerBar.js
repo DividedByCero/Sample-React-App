@@ -10,7 +10,7 @@ class HeaderBar extends React.Component {
     return (
       <AppBar>
         <Toolbar className="navbar-component">
-          <Typography variant="title" className="navbar-title-color">
+          <Typography variant="title" style={{ color: "white" }}>
             Master-Detail
           </Typography>
         </Toolbar>
