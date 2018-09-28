@@ -9,7 +9,7 @@ class InputWrapper extends React.Component {
   render() {
     return (
       <div>
-        <Input fullWidth />
+        <Input fullWidth value={this.props.value} />
       </div>
     );
   }
