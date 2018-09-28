@@ -46,11 +46,12 @@ class App extends React.Component {
   }
 
   DeleteItem(item) {
-    // let arr = this.state.baseStorage.slice();
-    // arr = arr.splice(item.id, 1);
-    // this.setState({
-    //   baseStorage : arr
-    // });
+    console.log(`delete called on Id No. ${item.id}`);
+    let arr = this.state.baseStorage.slice();
+    arr.splice(item.id, 1);
+    this.setState({
+      baseStorage : arr
+    });
   }
 
   render() {

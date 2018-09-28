@@ -20,22 +20,27 @@ class CRUDItem extends React.Component {
   constructor(props) {
     super(props);
     this.item = props.pick;
-    this.delete = props.delete;
+    this.delete = () => {
+      this.props.delete(this.item);
+    }
+
+    this.delete = this.delete.bind(this);
   }
   render() {
+    const item = this.item;
     return (
       <Grid item lg={3} sm={12} xs={12}>
         <Paper className={inputWrapperStyle}>
           <Button
             variant="outlined"
-            onClick={this.delete(this.item)}
+            onClick={this.delete}
             style={{ float: "right", margin: 10 }}
           >
             Delete
           </Button>
           <div style={{ padding: 50 }}>
-            <Typography align="caption">Field 1</Typography>
-            <InputWrapper value={this.item.field} />
+            <Typography align="caption">Field {item.id}</Typography>
+            <InputWrapper value={item.field} />
           </div>
         </Paper>
       </Grid>
